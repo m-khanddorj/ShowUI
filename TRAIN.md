@@ -4,8 +4,7 @@
 ```
 conda create -n showui python=3.10
 conda activate showui
-pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118 --user
-pip install -r requirements.txt --user
+pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu118
 ```
 
 ## 📦Setup Datasets
