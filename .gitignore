@@ -6,11 +6,13 @@ __pycache__/
 *.py[cod]
 venv/
 .env/
+.venv
 
 ## Uncleaned sections
 # Mind2Web
 
 # AITW
+dataset
 
 # MiniWob
 synapse/
