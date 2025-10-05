@@ -20,7 +20,7 @@
 """Image processor class for ShowUI, inherited from Qwen2-VL."""
 
 import math
-from typing import Dict, List, Optional, Union
+from typing import Dict, List, Optional, Union, Any
 
 import PIL
 import numpy as np
@@ -39,7 +39,6 @@ from transformers.image_utils import (
     ChannelDimension,
     ImageInput,
     PILImageResampling,
-    VideoInput,
     get_image_size,
     infer_channel_dimension_format,
     is_scaled_image,
@@ -83,7 +82,7 @@ def make_batched_images(images) -> List[List[ImageInput]]:
 
 
 # Copied from transformers.models.llava_next_video.image_processing_llava_next_video.make_batched_videos
-def make_batched_videos(videos) -> List[VideoInput]:
+def make_batched_videos(videos) -> List[Any]:
     if isinstance(videos, (list, tuple)) and isinstance(videos[0], (list, tuple)) and is_valid_image(videos[0][0]):
         return videos
 
@@ -288,7 +287,7 @@ class ShowUIImageProcessor(BaseImageProcessor):
     
     def _preprocess(
         self,
-        images: Union[ImageInput, VideoInput],
+        images: Union[ImageInput, Any],
         do_resize: bool = None,
         resample: PILImageResampling = None,
         do_rescale: bool = None,
@@ -435,7 +434,7 @@ class ShowUIImageProcessor(BaseImageProcessor):
     def preprocess(
         self,
         images: ImageInput,
-        videos: VideoInput = None,
+        videos: Any = None,
         do_resize: bool = None,
         size: Dict[str, int] = None,
         resample: PILImageResampling = None,
@@ -458,7 +457,7 @@ class ShowUIImageProcessor(BaseImageProcessor):
             images (`ImageInput`):
                 Image to preprocess. Expects a single or batch of images with pixel values ranging from 0 to 255. If
                 passing in images with pixel values between 0 and 1, set `do_rescale=False`.
-            videos (`VideoInput`):
+            videos (`Any`):
                 Video to preprocess. Expects a single or batch of videos with pixel values ranging from 0 to 255. If
                 passing in videos with pixel values between 0 and 1, set `do_rescale=False`.
             do_resize (`bool`, *optional*, defaults to `self.do_resize`):
