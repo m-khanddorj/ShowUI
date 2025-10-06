@@ -1,0 +1,55 @@
+Testing: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1272/1272 [3:01:00<00:00,  8.54s/it]
+
+============================================================
+Per-Platform and DataType Accuracy
+============================================================
+Platform DataType  Accuracy  Correct  Total
+  mobile     icon      71.2      163    229
+  mobile     text      94.5      258    273
+      pc     icon      61.4       86    140
+      pc     text      75.8      147    194
+     web     icon      69.9      144    206
+     web     text      77.0      177    230
+============================================================
+
+Overall Average Accuracy: 75.0%
+
+============================================================
+Test Results
+============================================================
+Total samples: 1272
+Correct predictions: 975
+Incorrect predictions: 297
+Accuracy: 76.65%
+============================================================
+First 5 errors (if available):
+
+1. File: pc_5e09e8e9-7ef6-44be-ad54-aeaeac151897.png
+   Instruction: minimize this window
+   Predicted: (0.98, 0.02)
+   Ground truth bbox: [0.8697916666666666, 0.0, 0.9072916666666667, 0.05555555555555555]
+   Output text: [0.98, 0.02]
+
+2. File: pc_ac2d2c5e-fe5a-4233-95b4-2de18ef76a9e.png
+   Instruction: adjust the style
+   Predicted: (0.69, 0.66)
+   Ground truth bbox: [0.6614583333333334, 0.6666666666666666, 0.7052083333333333, 0.7833333333333333]
+   Output text: [0.69, 0.66]
+
+3. File: pc_db6b6fa2-11cc-4b06-88cb-22c180f07a3b.png
+   Instruction: save the file
+   Predicted: (0.06, 0.21)
+   Ground truth bbox: [0.009375, 0.0, 0.04583333333333333, 0.05740740740740741]
+   Output text: [0.06, 0.21]
+
+4. File: pc_bc9ed2f6-79c1-4a35-bcb5-4760bf4ed57d.png
+   Instruction: add this page to favourites
+   Predicted: (0.94, 0.14)
+   Ground truth bbox: [0.9166666666666666, 0.011111111111111112, 0.9541666666666667, 0.06851851851851852]
+   Output text: [0.94, 0.14]
+
+5. File: pc_e618dc7e-8ffb-4a37-a317-9d3908c38395.png
+   Instruction: input method toolbar
+   Predicted: (0.28, 0.2)
+   Ground truth bbox: [0.9197916666666667, 0.9185185185185185, 0.984375, 1.0]
+   Output text: [0.28, 0.2]
